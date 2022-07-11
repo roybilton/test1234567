@@ -15,10 +15,12 @@ def favicon():
 
 @app.route('/hello', methods=['POST'])
 def hello():
-   name = request.data + "---" + request.headers.get("X-Sift-Science-Signature")
+   name = request.data
+   tesqt =  + request.headers.get("X-Sift-Science-Signature")
 
    if name:
        print('Request for hello page received with name=%s' % name)
+       print('xxxxxx for hello page received with name=%s' % tesqt)
        return render_template('hello.html', name = name)
    else:
        print(name)
