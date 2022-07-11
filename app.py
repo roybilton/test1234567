@@ -17,6 +17,8 @@ def favicon():
 def hello():
    name = request.data   
    tesqt = request.headers.get("X-Sift-Science-Signature")
+   
+   print('Request for hello page=%s' % tesqt)   
 
    if name:
        print('Request for hello page received with name=%s' % name)       
